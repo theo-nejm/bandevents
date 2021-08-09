@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fffffe;
+	font-family: sans-serif;
+	color: #2b2c34;
+}
+
+button {
+	height: 2.4rem;
+	width: 16rem;
+	background: #6246ea;
+	border: 2px solid #6246ea;
+	color: #fffffe;
+	font-weight: 600;
+	font-size: .95rem;
+	border-radius: .25rem;
+	cursor: pointer;
+	transition: .25s;
+}
+
+button:hover {
+	background: none;
+	border: 2px solid #6246ea;
+	color: #6246ea;
+}
+
+header {
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10rem;
+}
+
+input {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+header h1 {
+	font-size: 1.75rem;
+}
+
+header h1 span {
+	color: #fffffe;
+	font-weight: 300;
+	padding: .25rem .5rem;
+	background: linear-gradient(270deg, #6246ea, #8498dc);
+	margin-left: .25rem;
+	border-radius: .25rem;
+}
+
+header nav ul {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+header nav ul li a {
+	color: #2b2c34;	
+	position: relative;
+	transition: .25s ease;
+}
+
+header nav ul li a::after {
+	content: '';
+	position: absolute;
+	background: #6246ea;
+	height: 2px;
+	width: 100%;
+	bottom: -.5rem;
+	left: 0;
+	transform: scale(0);
+	transition: .25s ease;
+}
+
+header nav ul li a:hover {
+	color: #6246ea;
+}
+
+header nav ul li a:hover::after {
+	transform: scale(1);
+}
+
+.register-container {
+	display: flex;
+	width: 100%;
+	padding: 0 2.5vw;
+}
+
+.illustration {
+	grid-area: "illustration";
+	height: calc(100vh - 4rem);
+	width: 60vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.illustration img {
+	height: 70vh;
+}
+
+.form {
+    height: calc(100vh - 4rem);
+	width: 30vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form {
+	height: 30vh;
+	width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.form h2 {
+	font-size: 1.75rem;
+	letter-spacing: .05rem;
+	text-align: center;
+}
+
+.form input {
+	height: 2.4rem;
+	width: 16rem;
+	padding: 0 .5rem;
+	border-radius: .25rem;
+	border: 2px solid #C8ABFF;
+}
+
+.form input:focus {
+	border: 2px solid #6246ea;
+}
+
