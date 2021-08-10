@@ -10,6 +10,7 @@ body {
 	background: #fffffe;
 	font-family: sans-serif;
 	color: #2b2c34;
+	overflow-x: hidden;
 }
 
 button {
@@ -75,6 +76,7 @@ header nav ul li a {
 	color: #2b2c34;	
 	position: relative;
 	transition: .25s ease;
+	font-weight: 700;
 }
 
 header nav ul li a::after {
@@ -97,9 +99,12 @@ header nav ul li a:hover::after {
 	transform: scale(1);
 }
 
+/* ========================== PÁGINAS DE REGISTRO ========================== */
+
 .register-container {
 	display: flex;
-	width: 100%;
+	width: 100vw;
+	height: calc(100vh - 4rem);
 	padding: 0 2.5vw;
 }
 
@@ -151,5 +156,35 @@ form {
 
 .form input:focus {
 	border: 2px solid #6246ea;
+}
+
+/* ========================== PÁGINAS DE LISTAGEM ========================== */
+
+.list-container {
+	height: calc(100vh - 4rem);
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.list-container table {
+	height: 60vh;
+	width: 40rem;
+	max-width: 40rem;
+	
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	border-spacing: 2rem;
+	
+	overflow: auto;
+}
+
+.list-container table tr {
+	width: 100%;
+	height: 1.5rem;
 }
 

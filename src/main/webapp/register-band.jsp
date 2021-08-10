@@ -1,24 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Cadastrar uma banda</title>
 <link rel="stylesheet" href="styles/global.css" />
 </head>
 <body>
-	<header>
-		<h1>Band<span>Events</span></h1>
-		<div class="header-actions">
-			<nav>
-			<ul>
-				<li><a href="#">Cadastrar banda</a></li>
-				<li><a href="#">Agendar show</a></li>
-				<li><a href="#">Ver bandas</a></li>
-				<li><a href="#">Ver shows</a></li>
-			</ul>
-			</nav>
-		</div>
-	</header>
+	<%@ include file="./parts/header.jsp"%> 
 	<main>
 		<div class="register-container">
 			<div class="illustration">
