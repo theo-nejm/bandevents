@@ -16,9 +16,9 @@
 				<img src="assets/images/band.svg" alt="Cadastrar uma banda">
 			</div>
 			<div class="form">
-				<form>
+				<form action="registerBand">
 					<h2>Cadastrar uma banda</h2>
-					<input type="text" placeholder="Nome da banda: " required />
+					<input name="bandName" type="text" placeholder="Nome da banda: " required />
 					<button type="submit">Cadastrar banda</button>
 				</form>
 			</div>
