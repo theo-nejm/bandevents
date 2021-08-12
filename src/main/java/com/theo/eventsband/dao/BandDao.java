@@ -97,4 +97,21 @@ public class BandDao {
 			throw new RuntimeException(exc);
 		}
 	}
+	
+	public void edit(int id, Band band) {
+		try {
+			PreparedStatement statement = connection.prepareStatement("UPDATE bands SET name = ? WHERE id = ?");
+			
+			statement.setString(1, band.getName());
+			statement.setInt(2, id);
+			
+			statement.execute();
+			
+			statement.close();
+			connection.close();
+			
+		} catch (SQLException exc) {
+			throw new RuntimeException(exc);
+		}
+	}
 }

@@ -58,13 +58,13 @@
 	}
 	
 	.actions .edit-band {
-		background: blue;
-		border: 2px solid blue;
+		background: #4040ff;
+		border: 2px solid #4040ff;
 	}
 	
 	.actions .remove-band {
-		background-color: red;
-		border: 2px solid red;
+		background-color: #ff4040;
+		border: 2px solid #ff4040;
 	}
 	
 	.actions .remove-band:hover {
@@ -93,15 +93,15 @@
 					
 					<td class="actions">
 						<a  
-							href="#"
-							class="edit-band button"
+							href="edit-band.jsp?bandId=<%= band.getId() %>&currentName=<%= band.getName() %>"
+							class="edit-band"
 						>
 							Editar
 						</a>
 
 						<a
 							href="delete-band?bandId=<%= band.getId() %>"
-							class="remove-band button"
+							class="remove-band"
 						>
 							Remover
 						</a>
