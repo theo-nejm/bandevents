@@ -17,6 +17,15 @@
 		height: 50vh;
 	}
 	
+	form label {
+		font-weight: bold;
+		font-size: .8rem;
+	}
+	
+	form .select {
+		width: 16rem;
+	}
+	
 	form select {
 		outline: none;
 		width: 16rem;
@@ -26,6 +35,15 @@
 	
 	form select option {
 		height: 1.5rem;
+		display: flex;
+		align-items: center;
+		padding: 0 .25rem;
+		border-radius: .25rem;
+		margin-bottom: .1rem;
+	}
+	
+	form select option:focus {
+		border: 2px solid #6246ea;
 	}
 </style>
 </head>
@@ -40,11 +58,15 @@
 				<form action="register-show" method="post">
 					<h2>Agendar um show</h2>
 					<input name="bandName" type="text" placeholder="Nome do show: " required />
-					<select name="bands" multiple size="4">
+					
+					<div class="select">
+					<label for="bands">Bandas participantes: </label>
+					<select name="bands" multiple size="4" id="bands">
 						<% for (Band band: bands) { %>
 						<option value="<%= band.getId() %>"><%= band.getName() %></option>
 						<% } %>
 					</select>
+					</div>
 					
 					<button type="submit">Agendar show</button>
 				</form>

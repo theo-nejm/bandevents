@@ -133,7 +133,6 @@ header nav ul li a:hover::after {
 form {
 	height: 25rem;
 	width: 100%;
-	background: red;
 	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
