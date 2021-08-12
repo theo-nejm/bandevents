@@ -86,6 +86,10 @@
 		background: none;
 	}
 	
+	.illustration img {
+		width: 45vw !important;
+	}
+	
 </style>
 </head>
 <body>
