@@ -5,9 +5,9 @@
 	<div class="header-actions">
 		<nav>
 		<ul>
-			<li><a href="#">Cadastrar banda</a></li>
+			<li><a href="register-band.jsp">Cadastrar banda</a></li>
 			<li><a href="#">Agendar show</a></li>
-			<li><a href="#">Ver bandas</a></li>
+			<li><a href="list-bands">Ver bandas</a></li>
 			<li><a href="#">Ver shows</a></li>
 		</ul>
 		</nav>

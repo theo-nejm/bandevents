@@ -15,6 +15,15 @@
 <title>Ver bandas</title>
 <link rel="stylesheet" href="./styles/global.css" />
 <style>
+	main {
+		width: 100vw;
+		height: calc(100vh - 4rem);
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		padding: 0 2.5rem;
+	}
+
 	.list-container {
 		height: calc(100vh - 4rem);
 		width: 100vw;
@@ -109,6 +118,9 @@
 				</tr>
 				<% } %>
 			</table>
+		</div>
+		<div class="illustration">
+			<img src="./assets/images/band2.svg" alt="Um grupo de pessoas"/>
 		</div>
 	</main>
 </body>
