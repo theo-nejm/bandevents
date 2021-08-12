@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class BandDao {
 		this.connection = new ConnectionFactory().getConnection();
 	}
 	
-	public void register(Band band) {
+	public void register(Band band) throws SQLIntegrityConstraintViolationException {
 		String sqlQuery = "INSERT INTO bands (name) values(?)";
 		
 		try {
@@ -31,7 +32,6 @@ public class BandDao {
 		} catch (SQLException exc) {
 			throw new RuntimeException(exc);
 		}
-		
 	}
 	
 	public Band getOne(int id) {
@@ -71,7 +71,7 @@ public class BandDao {
 				band.setName(result.getString("name"));
 				
 				bandsList.add(band);
-			} 
+			}
 			
 			statement.close();
 			result.close();
@@ -82,5 +82,19 @@ public class BandDao {
 		}
 		
 		return bandsList;
+	}
+	
+	public void remove(int id) {
+		try {
+			PreparedStatement statement = connection.prepareStatement("DELETE FROM bands WHERE id=" + id);
+			
+			statement.execute();
+			
+			statement.close();
+			connection.close();
+			
+		} catch (SQLException exc) {
+			throw new RuntimeException(exc);
+		}
 	}
 }

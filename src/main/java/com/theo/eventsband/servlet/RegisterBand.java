@@ -1,6 +1,7 @@
 package com.theo.eventsband.servlet;
 
 import java.io.IOException;
+import java.sql.SQLIntegrityConstraintViolationException;
 
 import com.theo.eventsband.dao.BandDao;
 import com.theo.eventsband.model.Band;
@@ -29,15 +30,18 @@ public class RegisterBand extends HttpServlet {
 			HttpServletResponse response)
 			throws ServletException, IOException {
 	      
-		BandDao dao = new BandDao();
-		Band band = new Band();
-		
-		String newBandName = request.getParameter("bandName");
-		band.setName(newBandName);
-		dao.register(band);
-		
-		RequestDispatcher rd = request
-			     .getRequestDispatcher("/show-bands.jsp");
-		rd.forward(request,response);
+		try {
+			BandDao dao = new BandDao();
+			Band band = new Band();
+		    
+			String newBandName = request.getParameter("bandName");
+			
+			band.setName(newBandName);
+			dao.register(band);
+			
+			response.sendRedirect("list-bands");
+		} catch (SQLIntegrityConstraintViolationException exc) {
+			return;
+		}
 	}
 }

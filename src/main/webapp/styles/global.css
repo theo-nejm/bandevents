@@ -13,8 +13,9 @@ body {
 	overflow-x: hidden;
 }
 
-button {
-	height: 2.4rem;
+button,
+.button {
+	height: 2.4rem !important;
 	width: 16rem;
 	background: #6246ea;
 	border: 2px solid #6246ea;
@@ -26,7 +27,8 @@ button {
 	transition: .25s;
 }
 
-button:hover {
+button:hover,
+.button:hover {
 	background: none;
 	border: 2px solid #6246ea;
 	color: #6246ea;
@@ -156,35 +158,5 @@ form {
 
 .form input:focus {
 	border: 2px solid #6246ea;
-}
-
-/* ========================== PÁGINAS DE LISTAGEM ========================== */
-
-.list-container {
-	height: calc(100vh - 4rem);
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 1.5rem;
-}
-
-.list-container table {
-	height: 60vh;
-	width: 40rem;
-	max-width: 40rem;
-	
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	border-spacing: 2rem;
-	
-	overflow: auto;
-}
-
-.list-container table tr {
-	width: 100%;
-	height: 1.5rem;
 }
 
